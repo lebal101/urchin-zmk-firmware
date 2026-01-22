@@ -86,13 +86,6 @@
         // left index & middle fingers (home-row)
         // hold control & space for Adobe workflow
 
-        combo_ctrl_space {
-            timeout-ms = <200>;
-            key-positions = <12 13>;
-            bindings = <&kp LC(SPACE)>;
-            layers = <BASE>;
-        };
-
         bsp {
             bindings = <&kp BACKSPACE>;
             key-positions = <17 18>;
