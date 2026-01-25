@@ -501,6 +501,27 @@
             key-positions = <6 7>;
             timeout-ms = <25>;
         };
+
+        paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <22 23>;
+        };
+
+        shift_paste {
+            bindings = <&kp LC(LS(V))>;
+            key-positions = <23 24>;
+        };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <22 21>;
+        };
+
+        shift_copy {
+            bindings = <&kp LC(LS(C))>;
+            key-positions = <22 21>;
+            layers = <1>;
+        };
     };
 
     macros {
@@ -561,10 +582,10 @@
 
         left_left_thumb {
             bindings = <
-&kp LG(LA(TAB))      &kp LG(LA(UP_ARROW))  &kp_then_sl LC(LS(TAB)) 6  &kp_then_sl LC(TAB) 6    &trans         &kp LA(LG(RIGHT))            &kp LG(DOWN)                     &kp LG(UP_ARROW)                  &kp LEFT_BRACKET  &kp LG(END)
-&kp_then_sl LC(A) 1  &kp LC(S)             &kp_then_sl LG(LEFT) 4     &kp_then_sl LG(RIGHT) 3  &kp LC(LS(C))  &kp_then_sl LC(LG(RIGHT)) 1  &trans                           &trans                            &trans            &kp SQT
-&kp LC(Z)            &kp LC(X)             &kp LC(C)                  &kp LC(V)                &kp LC(LS(V))  &trans                       &kp_then_sl_slow LS(LG(LEFT)) 9  &kp_then_sl_slow LS(LG(RIGHT)) 9  &trans            &trans
-                                                                      &trans                   &trans         &trans                       &trans
+&kp LG(LA(TAB))      &kp LG(LA(UP_ARROW))  &kp_then_sl LC(LS(TAB)) 6  &kp_then_sl LC(TAB) 6    &trans  &kp LA(LG(RIGHT))            &kp LG(DOWN)                     &kp LG(UP_ARROW)                  &kp LEFT_BRACKET  &kp LG(END)
+&kp_then_sl LC(A) 1  &kp LC(S)             &kp_then_sl LG(LEFT) 4     &kp_then_sl LG(RIGHT) 3  &none   &kp_then_sl LC(LG(RIGHT)) 1  &trans                           &trans                            &trans            &kp SQT
+&kp LC(Y)            &kp LC(X)             &none                      &none                    &none   &trans                       &kp_then_sl_slow LS(LG(LEFT)) 9  &kp_then_sl_slow LS(LG(RIGHT)) 9  &trans            &trans
+                                                                      &trans                   &trans  &trans                       &trans
             >;
         };
 
