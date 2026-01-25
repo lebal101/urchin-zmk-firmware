@@ -514,15 +514,14 @@
         kp_then_sl: dollar_sl_right {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>, <&macro_param_2to1 &sl MACRO_PLACEHOLDER>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &sl MACRO_PLACEHOLDER>;
             label = "DOLLAR_SL_RIGHT";
         };
 
         tap_and_to: new_macro {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings =
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>, <&macro_param_2to1 &to MACRO_PLACEHOLDER>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &to MACRO_PLACEHOLDER>;
             label = "NEW_MACRO";
         };
 
@@ -536,18 +535,14 @@
         kp_then_sl_fast: kp_then_sl_fast {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings =
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,  <&macro_param_2to1 &sl_fast MACRO_PLACEHOLDER>;
-
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &sl_fast MACRO_PLACEHOLDER>;
             label = "KP_THEN_SL_FAST";
         };
 
         kp_then_sl_slow: kp_then_sl_slow {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings =
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>, <&macro_param_2to1 &sl_slow MACRO_PLACEHOLDER>;
-
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &sl_slow MACRO_PLACEHOLDER>;
             label = "KP_THEN_SL_SLOW";
         };
     };
@@ -557,246 +552,245 @@
 
         default_layer {
             bindings = <
-&ltl 17 W                         &kp L                 &htl_undec LGUI Z  &htl LEFT_CONTROL P        &kp B                     &kp Y                       &htr LCTRL F                &htr_undec LGUI O    &kp U                 &ltr_end_shifted_home 17 0
-&htl_undec_idle_req LEFT_SHIFT C  &htl_idle_req LALT R  &kp S              &t_T_h_Arr_m_ShiftArr      &kp G                     &h_winCtl_t_m_stay_shifted  &h_winAlt_t_n_stay_shifted  &htr LA(LC(LGUI)) E  &htr_idle_req LALT I  &htr_undec_idle_req LSHIFT A
-&ltr 16 Q                         &kp J                 &kp V              &htl_undec LEFT_CONTROL D  &kp K                     &kp X                       &htr_undec LCTRL H          &kp COMMA            &kp DOT               &ltr 16 SEMICOLON
-                                                                           &sl 1                      &t_sp_h_cmd_morph_caps    &sl 7                       &tsk_hmo 11 LSHIFT
+&ltl 17 W                         &kp L                 &htl_undec LGUI Z  &htl LEFT_CONTROL P        &kp B                   &kp Y            &htr LCTRL F        &htr_undec LGUI O    &kp U                 &ltr_end_shifted_home 17 0
+&htl_undec_idle_req LEFT_SHIFT C  &htl_idle_req LALT R  &kp S              &t_T_h_Arr_m_ShiftArr      &kp G                   &htr LC(LGUI) M  &htr LA(LGUI) N     &htr LA(LC(LGUI)) E  &htr_idle_req LALT I  &htr_undec_idle_req LSHIFT A
+&ltr 16 Q                         &kp J                 &kp V              &htl_undec LEFT_CONTROL D  &kp K                   &kp X            &htr_undec LCTRL H  &kp COMMA            &kp DOT               &ltr 16 SEMICOLON
+                                                                           &sl 1                      &t_sp_h_cmd_morph_caps  &sl 7            &tsk_hmo 11 LSHIFT
             >;
         };
 
         left_left_thumb {
             bindings = <
-&kp LG(LA(TAB))      &kp LG(LA(UP_ARROW))  &kp_then_sl LC(LS(TAB)) 6  &kp_then_sl LC(TAB) 6    &trans           &kp LA(LG(RIGHT))            &kp LG(DOWN)                     &kp LG(UP_ARROW)                  &kp LEFT_BRACKET  &kp LG(END)
-&kp_then_sl LC(A) 1  &kp LC(S)             &kp_then_sl LG(LEFT) 4     &kp_then_sl LG(RIGHT) 3  &kp LC(LS(C))    &kp_then_sl LC(LG(RIGHT)) 1  &trans                           &trans                            &trans            &kp SQT
-&kp LC(Z)            &kp LC(X)             &kp LC(C)                  &kp LC(V)                &kp LC(LS(V))    &trans                       &kp_then_sl_slow LS(LG(LEFT)) 9  &kp_then_sl_slow LS(LG(RIGHT)) 9  &trans            &trans
-                                                                      &trans                   &trans           &trans                       &trans
+&kp LG(LA(TAB))      &kp LG(LA(UP_ARROW))  &kp_then_sl LC(LS(TAB)) 6  &kp_then_sl LC(TAB) 6    &trans         &kp LA(LG(RIGHT))            &kp LG(DOWN)                     &kp LG(UP_ARROW)                  &kp LEFT_BRACKET  &kp LG(END)
+&kp_then_sl LC(A) 1  &kp LC(S)             &kp_then_sl LG(LEFT) 4     &kp_then_sl LG(RIGHT) 3  &kp LC(LS(C))  &kp_then_sl LC(LG(RIGHT)) 1  &trans                           &trans                            &trans            &kp SQT
+&kp LC(Z)            &kp LC(X)             &kp LC(C)                  &kp LC(V)                &kp LC(LS(V))  &trans                       &kp_then_sl_slow LS(LG(LEFT)) 9  &kp_then_sl_slow LS(LG(RIGHT)) 9  &trans            &trans
+                                                                      &trans                   &trans         &trans                       &trans
             >;
         };
 
         arrows {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans                         &trans                   &trans                       &trans                    &trans
-&trans  &trans  &trans  &trans  &trans    &trans                         &trans                   &trans                       &trans                    &trans
-&trans  &trans  &trans  &trans  &trans    &kp_then_sl_slow LEFT_ARROW 2  &kp_then_sl_slow DOWN 2  &kp_then_sl_slow UP_ARROW 2  &kp_then_sl_slow RIGHT 2  &trans
-                        &trans  &trans    &trans                         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                         &trans                   &trans                       &trans                    &trans
+&trans  &trans  &trans  &trans  &trans  &trans                         &trans                   &trans                       &trans                    &trans
+&trans  &trans  &trans  &trans  &trans  &kp_then_sl_slow LEFT_ARROW 2  &kp_then_sl_slow DOWN 2  &kp_then_sl_slow UP_ARROW 2  &kp_then_sl_slow RIGHT 2  &trans
+                        &trans  &trans  &trans                         &trans
             >;
         };
 
         left_left_thumb_ws_move_right {
             bindings = <
-&trans  &trans  &trans        &trans                   &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LG(LEFT)  &kp_then_sl LG(RIGHT) 3  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans        &trans                   &trans    &trans  &trans  &trans  &trans  &trans
-                              &trans                   &trans    &trans  &trans
+&trans  &trans  &trans        &trans                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LG(LEFT)  &kp_then_sl LG(RIGHT) 3  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans        &trans                   &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans                   &trans  &trans  &trans
             >;
         };
 
         left_left_thumb_ws_move_left {
             bindings = <
-&trans  &trans  &trans                  &trans         &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp_then_sl LG(LEFT) 5  &kp LG(RIGHT)  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans                  &trans         &trans    &trans  &trans  &trans  &trans  &trans
-                                        &trans         &trans    &trans  &trans
+&trans  &trans  &trans                  &trans         &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp_then_sl LG(LEFT) 5  &kp LG(RIGHT)  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans                  &trans         &trans  &trans  &trans  &trans  &trans  &trans
+                                        &trans         &trans  &trans  &trans
             >;
         };
 
         left_left_thumb_ws_move_stay {
             bindings = <
-&trans  &trans  &trans                  &trans                   &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp_then_sl LG(LEFT) 5  &kp_then_sl LG(RIGHT) 5  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans                  &trans                   &trans    &trans  &trans  &trans  &trans  &trans
-                                        &trans                   &trans    &trans  &trans
+&trans  &trans  &trans                  &trans                   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp_then_sl LG(LEFT) 5  &kp_then_sl LG(RIGHT) 5  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans                  &trans                   &trans  &trans  &trans  &trans  &trans  &trans
+                                        &trans                   &trans  &trans  &trans
             >;
         };
 
         left_left_thumb_tab {
             bindings = <
-&trans  &trans  &kp_then_sl LC(LS(TAB)) 6  &kp_then_sl LC(TAB) 6  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans                     &trans                 &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans                     &trans                 &trans    &trans  &trans  &trans  &trans  &trans
-                                           &trans                 &trans    &trans  &trans
+&trans  &trans  &kp_then_sl LC(LS(TAB)) 6  &kp_then_sl LC(TAB) 6  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans                     &trans                 &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans                     &trans                 &trans  &trans  &trans  &trans  &trans  &trans
+                                           &trans                 &trans  &trans  &trans
             >;
         };
 
         right_thumb_left {
             bindings = <
-&kp LS(RIGHT_BRACKET)  &kp LS(NUMBER_5)  &kp RA(N8)                            &kp RA(N9)  &kp RA(NON_US_BACKSLASH)    &backtick_space                 &kp_then_sl_fast LS(NUMBER_4) 0  &kp LS(MINUS)                 &kp_then_sl_fast RIGHT_BRACKET 0  &kp LS(NUMBER_1)
-&kp LS(N8)             &kp SLASH         &lt 0 LS(SLASH)                       &kp LS(N9)  &kp NON_US_HASH             &htr_undec LC(LS(LGUI)) RA(N0)  &kp LS(N0)                       &lt 0 LS(NON_US_HASH)         &kp LS(NUMBER_2)                  &kp RA(N7)
-&kp RA(Q)              &kp RA(MINUS)     &kp_then_sl_fast RA(RIGHT_BRACKET) 0  &kp LS(N7)  &kp LS(NUMBER_6)            &kp NON_US_BSLH                 &kp_then_sl_slow LG(LEFT) 8      &kp_then_sl_slow LG(RIGHT) 8  &kp LS(NON_US_BSLH)               &kp RA(E)
-                                                                               &trans      &trans                      &trans                          &trans
+&kp LS(RIGHT_BRACKET)  &kp LS(NUMBER_5)  &kp RA(N8)                            &kp RA(N9)  &kp RA(NON_US_BACKSLASH)  &backtick_space                 &kp_then_sl_fast LS(NUMBER_4) 0  &kp LS(MINUS)                 &kp_then_sl_fast RIGHT_BRACKET 0  &kp LS(NUMBER_1)
+&kp LS(N8)             &kp SLASH         &lt 0 LS(SLASH)                       &kp LS(N9)  &kp NON_US_HASH           &htr_undec LC(LS(LGUI)) RA(N0)  &kp LS(N0)                       &lt 0 LS(NON_US_HASH)         &kp LS(NUMBER_2)                  &kp RA(N7)
+&kp RA(Q)              &kp RA(MINUS)     &kp_then_sl_fast RA(RIGHT_BRACKET) 0  &kp LS(N7)  &kp LS(NUMBER_6)          &kp NON_US_BSLH                 &kp_then_sl_slow LG(LEFT) 8      &kp_then_sl_slow LG(RIGHT) 8  &kp LS(NON_US_BSLH)               &kp RA(E)
+                                                                               &trans      &trans                    &trans                          &trans
             >;
         };
 
         rtl_ws_lr {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans                       &trans                        &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans                       &trans                        &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &kp_then_sl_slow LG(LEFT) 8  &kp_then_sl_slow LG(RIGHT) 8  &trans  &trans
-                        &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                       &trans                        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                       &trans                        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp_then_sl_slow LG(LEFT) 8  &kp_then_sl_slow LG(RIGHT) 8  &trans  &trans
+                        &trans  &trans  &trans  &trans
             >;
         };
 
         rtl_shifted_ws_lr {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans                           &trans                            &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans                           &trans                            &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &kp_then_sl_slow LG(LS(LEFT)) 9  &kp_then_sl_slow LG(LS(RIGHT)) 9  &trans  &trans
-                        &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                           &trans                            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                           &trans                            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp_then_sl_slow LG(LS(LEFT)) 9  &kp_then_sl_slow LG(LS(RIGHT)) 9  &trans  &trans
+                        &trans  &trans  &trans  &trans
             >;
         };
 
         move_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans               &none         &kp PAGE_DOWN  &kp PG_UP     &none          &none
-&trans  &trans  &trans  &trans  &trans               &kp LEFT      &kp DOWN       &kp UP_ARROW  &kp RIGHT      &kp END
-&trans  &trans  &trans  &trans  &trans               &kp LC(LEFT)  &kp HOME       &none         &kp LC(RIGHT)  &none
-                        &mo 23  &kp RIGHT_CONTROL    &kp RSHIFT    &trans
+&trans  &trans  &trans  &trans  &trans             &none         &kp PAGE_DOWN  &kp PG_UP     &none          &none
+&trans  &trans  &trans  &trans  &trans             &kp LEFT      &kp DOWN       &kp UP_ARROW  &kp RIGHT      &kp END
+&trans  &trans  &trans  &trans  &trans             &kp LC(LEFT)  &kp HOME       &none         &kp LC(RIGHT)  &none
+                        &mo 23  &kp RIGHT_CONTROL  &kp RSHIFT    &trans
             >;
         };
 
         numbers_layer {
             bindings = <
-&none   &kp N8  &kp N9           &kp N0            &none     &none   &none      &none      &none    &none
-&kp N1  &kp N2  &ltl 0 NUMBER_3  &ltl 10 NUMBER_4  &none     &none   &ltr 0 N7  &ltr 0 N8  &kp N9   &kp N0
-&none   &kp N7  &kp N6           &kp N5            &none     &none   &kp N6     &kp COMMA  &kp DOT  &none
-                                 &trans            &trans    &trans  &trans
+&none   &kp N8  &kp N9           &kp N0            &none   &none   &none      &none      &none    &none
+&kp N1  &kp N2  &ltl 0 NUMBER_3  &ltl 10 NUMBER_4  &none   &none   &ltr 0 N7  &ltr 0 N8  &kp N9   &kp N0
+&none   &kp N7  &kp N6           &kp N5            &none   &none   &kp N6     &kp COMMA  &kp DOT  &none
+                                 &trans            &trans  &trans  &trans
             >;
         };
 
         QWERTY {
             bindings = <
-&kp Q  &kp W  &kp E      &kp R      &kp T                     &kp Y      &kp U       &kp I      &kp O    &kp P
-&kp A  &kp S  &kp LC(D)  &kp G      &kp H                     &kp H      &kp J       &kp K      &kp L    &kp SEMI
-&kp Z  &kp X  &kp C      &kp V      &kp B                     &kp N      &kp M       &kp COMMA  &kp DOT  &kp LBKT
-                         &kp ENTER  &t_sp_h_cmd_morph_caps    &sk LSHFT  &sl_fast 0
+&kp Q  &kp W  &kp E      &kp R      &kp T                   &kp Y      &kp U       &kp I      &kp O    &kp P
+&kp A  &kp S  &kp LC(D)  &kp G      &kp H                   &kp H      &kp J       &kp K      &kp L    &kp SEMI
+&kp Z  &kp X  &kp C      &kp V      &kp B                   &kp N      &kp M       &kp COMMA  &kp DOT  &kp LBKT
+                         &kp ENTER  &t_sp_h_cmd_morph_caps  &sk LSHFT  &sl_fast 0
             >;
         };
 
         workspace_nav {
             bindings = <
-&none          &kp LG(N8)     &kp LG(N9)     &kp LG(N0)     &none            &none  &none             &none       &none       &none
-&kp LG(LA(C))  &kp LG(LA(R))  &kp LG(LA(S))  &kp LG(LA(T))  &none            &none  &kp LG(N7)        &kp LG(N8)  &kp LG(N9)  &kp LG(N0)
-&none          &kp LG(N7)     &kp LG(N6)     &kp LG(N5)     &none            &none  &kp LG(NUMBER_6)  &none       &none       &none
-                                             &kp LG(ENTER)  &kp LG(SPACE)    &none  &kp LG(TAB)
+&none          &kp LG(N8)     &kp LG(N9)     &kp LG(N0)     &none          &none  &none             &none       &none       &none
+&kp LG(LA(C))  &kp LG(LA(R))  &kp LG(LA(S))  &kp LG(LA(T))  &none          &none  &kp LG(N7)        &kp LG(N8)  &kp LG(N9)  &kp LG(N0)
+&none          &kp LG(N7)     &kp LG(N6)     &kp LG(N5)     &none          &none  &kp LG(NUMBER_6)  &none       &none       &none
+                                             &kp LG(ENTER)  &kp LG(SPACE)  &none  &kp LG(TAB)
             >;
         };
 
         adv_ws_nav {
             bindings = <
-&none           &kp LG(LC(N8))  &kp LG(LC(N9))  &kp LG(LC(N0))     &none                &none  &none             &none       &none       &none
-&kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp LG(LC(N4))     &none                &none  &kp LG(N7)        &kp LG(N8)  &kp LG(N9)  &kp LG(N0)
-&none           &kp LG(LC(N7))  &kp LG(LC(N6))  &kp LG(LC(N5))     &none                &none  &kp LG(NUMBER_6)  &none       &none       &none
-                                                &kp LG(LC(ENTER))  &kp LG(LC(SPACE))    &none  &kp LG(TAB)
+&none           &kp LG(LC(N8))  &kp LG(LC(N9))  &kp LG(LC(N0))     &none              &none  &none             &none       &none       &none
+&kp LG(LC(N1))  &kp LG(LC(N2))  &kp LG(LC(N3))  &kp LG(LC(N4))     &none              &none  &kp LG(N7)        &kp LG(N8)  &kp LG(N9)  &kp LG(N0)
+&none           &kp LG(LC(N7))  &kp LG(LC(N6))  &kp LG(LC(N5))     &none              &none  &kp LG(NUMBER_6)  &none       &none       &none
+                                                &kp LG(LC(ENTER))  &kp LG(LC(SPACE))  &none  &kp LG(TAB)
             >;
         };
 
         commands_and_mouse {
             bindings = <
-&none      &none      &kp LS(LG(BACKSPACE))  &none      &none            &none      &none          &msc SCRL_UP    &none  &none
-&kp LC(A)  &kp LC(S)  &kp LC(D)              &kp LC(F)  &kp BACKSPACE    &none      &kp LC(SLASH)  &msc SCRL_DOWN  &none  &kp LC(RIGHT_BRACKET)
-&kp LC(Y)  &kp LC(X)  &kp LC(C)              &kp LC(V)  &kp DEL          &none      &none          &none           &none  &none
-                                             &none      &none            &kp LSHFT  &none
+&none      &none      &kp LS(LG(BACKSPACE))  &none      &none          &none      &none          &msc SCRL_UP    &none  &none
+&kp LC(A)  &kp LC(S)  &kp LC(D)              &kp LC(F)  &kp BACKSPACE  &none      &kp LC(SLASH)  &msc SCRL_DOWN  &none  &kp LC(RIGHT_BRACKET)
+&kp LC(Y)  &kp LC(X)  &kp LC(C)              &kp LC(V)  &kp DEL        &none      &none          &none           &none  &none
+                                             &none      &none          &kp LSHFT  &none
             >;
         };
 
         Function {
             bindings = <
-&none   &none   &kp F11  &none   &none    &none  &none   &kp F12  &none   &none
-&kp F1  &kp F2  &kp F3   &kp F4  &none    &none  &kp F7  &kp F8   &kp F9  &kp F10
-&none   &none   &none    &kp F5  &none    &none  &kp F6  &none    &none   &none
-                         &none   &none    &none  &none
+&none   &none   &kp F11  &none   &none  &none  &none   &kp F12  &none   &none
+&kp F1  &kp F2  &kp F3   &kp F4  &none  &none  &kp F7  &kp F8   &kp F9  &kp F10
+&none   &none   &none    &kp F5  &none  &none  &kp F6  &none    &none   &none
+                         &none   &none  &none  &none
             >;
         };
 
         bt_reset_trans_left {
             bindings = <
-&none   &none  &none  &none       &bt BT_SEL 0    &none  &none  &none  &none  &none
-&mo 20  &none  &none  &none       &bt BT_SEL 1    &none  &none  &none  &none  &mo 20
-&none   &none  &none  &bt BT_CLR  &bt BT_SEL 2    &none  &none  &none  &none  &none
-                      &none       &none           &none  &none
+&none   &none  &none  &none       &bt BT_SEL 0  &none  &none  &none  &none  &none
+&mo 20  &none  &none  &none       &bt BT_SEL 1  &none  &none  &none  &none  &mo 20
+&none   &none  &none  &bt BT_CLR  &bt BT_SEL 2  &none  &none  &none  &none  &none
+                      &none       &none         &none  &none
             >;
         };
 
         bt_reset_trans_right {
             bindings = <
-&none   &none  &none  &none  &none    &none  &none  &none  &none  &none
-&mo 20  &none  &none  &none  &none    &none  &none  &none  &none  &mo 20
-&none   &none  &none  &none  &none    &none  &none  &none  &none  &none
-                      &none  &none    &none  &none
+&none   &none  &none  &none  &none  &none  &none  &none  &none  &none
+&mo 20  &none  &none  &none  &none  &none  &none  &none  &none  &mo 20
+&none   &none  &none  &none  &none  &none  &none  &none  &none  &none
+                      &none  &none  &none  &none
             >;
         };
 
         media_alt_nav_depr {
             bindings = <
-&kp C_VOLUME_DOWN    &kp C_VOL_UP     &kp LC(SLASH)  &kp LC(RIGHT_BRACKET)  &none    &none  &none             &kp LA(LC(UP_ARROW))  &none              &none
-&kp LS(LC(LA(TAB)))  &kp LS(LC(TAB))  &kp LC(TAB)    &kp LA(LC(TAB))        &none    &none  &kp LA(LC(LEFT))  &kp LA(LC(DOWN))      &kp LA(LC(RIGHT))  &kp LC(LA(END))
-&none                &none            &none          &none                  &none    &none  &kp LA(LC(HOME))  &none                 &none              &none
-                                                     &none                  &none    &none  &none
+&kp C_VOLUME_DOWN    &kp C_VOL_UP     &kp LC(SLASH)  &kp LC(RIGHT_BRACKET)  &none  &none  &none             &kp LA(LC(UP_ARROW))  &none              &none
+&kp LS(LC(LA(TAB)))  &kp LS(LC(TAB))  &kp LC(TAB)    &kp LA(LC(TAB))        &none  &none  &kp LA(LC(LEFT))  &kp LA(LC(DOWN))      &kp LA(LC(RIGHT))  &kp LC(LA(END))
+&none                &none            &none          &none                  &none  &none  &kp LA(LC(HOME))  &none                 &none              &none
+                                                     &none                  &none  &none  &none
             >;
         };
 
         bluetooth_and_reset {
             bindings = <
-&none  &bootloader  &none  &none           &bt BT_SEL 0    &none  &none  &none  &bootloader  &none
-&none  &sys_reset   &none  &studio_unlock  &bt BT_SEL 1    &none  &none  &none  &sys_reset   &none
-&none  &none        &none  &bt BT_CLR      &bt BT_SEL 2    &none  &none  &none  &none        &none
-                           &none           &none           &none  &none
+&none  &bootloader  &none  &none           &bt BT_SEL 0  &none  &none  &none  &bootloader  &none
+&none  &sys_reset   &none  &studio_unlock  &bt BT_SEL 1  &none  &none  &none  &sys_reset   &none
+&none  &none        &none  &bt BT_CLR      &bt BT_SEL 2  &none  &none  &none  &none        &none
+                           &none           &none         &none  &none
             >;
         };
 
         qwerty_with_mods {
             bindings = <
-&ltl 17 Q                         &kp W                 &htl LGUI E  &htl LEFT_CONTROL R        &kp T                     &kp Y              &htr LCTRL U             &htr LGUI I  &kp O                 &ltr 18 TAB
-&htl_undec_idle_req LEFT_SHIFT A  &htl_idle_req LALT S  &ltl 0 D     &ltl 10 F                  &kp G                     &kp H              &ltr_idle_required 13 J  &ltr 0 K     &htr_idle_req LALT L  &htr_undec_idle_req LSHIFT P
-&ltr 16 Z                         &kp X                 &kp C        &htl_undec LEFT_CONTROL V  &kp B                     &kp N              &htr_undec LCTRL M       &kp COMMA    &kp DOT               &h_mo_t_to_r 16 22
-                                                                     &lt 19 ENTER               &t_sp_h_cmd_morph_caps    &tsk_hmo 11 RSHFT  &sl_fast 0
+&ltl 17 Q                         &kp W                 &htl LGUI E  &htl LEFT_CONTROL R        &kp T                   &kp Y              &htr LCTRL U             &htr LGUI I  &kp O                 &ltr 18 TAB
+&htl_undec_idle_req LEFT_SHIFT A  &htl_idle_req LALT S  &ltl 0 D     &ltl 10 F                  &kp G                   &kp H              &ltr_idle_required 13 J  &ltr 0 K     &htr_idle_req LALT L  &htr_undec_idle_req LSHIFT P
+&ltr 16 Z                         &kp X                 &kp C        &htl_undec LEFT_CONTROL V  &kp B                   &kp N              &htr_undec LCTRL M       &kp COMMA    &kp DOT               &h_mo_t_to_r 16 22
+                                                                     &lt 19 ENTER               &t_sp_h_cmd_morph_caps  &tsk_hmo 11 RSHFT  &sl_fast 0
             >;
         };
 
         resize_split {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans             &kp LS(LA(LC(U)))  &trans             &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &kp LS(LA(LC(L)))  &kp LA(LS(LC(D)))  &kp LA(LS(LC(R)))  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans             &trans             &trans             &trans
-                        &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans             &kp LS(LA(LC(U)))  &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp LS(LA(LC(L)))  &kp LA(LS(LC(D)))  &kp LA(LS(LC(R)))  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans             &trans             &trans             &trans
+                        &trans  &trans  &trans  &trans
             >;
         };
 
         gaming {
             bindings = <
-&kp TAB           &kp Q  &kp R  &kp E           &kp T        &kp Y   &kp U   &kp I      &kp O    &kp P
-&kp LEFT_SHIFT    &kp A  &kp W  &kp D           &kp G        &kp H   &kp J   &kp K      &kp L    &kp SEMI
-&kp LEFT_CONTROL  &kp X  &kp S  &kp LEFT_SHIFT  &kp B        &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH
-                                &trans          &kp SPACE    &trans  &trans
+&kp TAB           &kp Q  &kp R  &kp E           &kp T      &kp Y   &kp U   &kp I      &kp O    &kp P
+&kp LEFT_SHIFT    &kp A  &kp W  &kp D           &kp G      &kp H   &kp J   &kp K      &kp L    &kp SEMI
+&kp LEFT_CONTROL  &kp X  &kp S  &kp LEFT_SHIFT  &kp B      &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH
+                                &trans          &kp SPACE  &trans  &trans
             >;
         };
 
         ws_move {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &kp_then_sl_fast LG(RA(RIGHT)) 0  &kp LG(UP_ARROW)  &trans             &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &ltr 13 LG(LEFT)                  &kp LG(RIGHT)     &kp LC(LG(RIGHT))  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &htr LCTRL LG(DOWN)               &trans            &trans             &trans
-                        &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp_then_sl_fast LG(RA(RIGHT)) 0  &kp LG(UP_ARROW)  &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &ltr 13 LG(LEFT)                  &kp LG(RIGHT)     &kp LC(LG(RIGHT))  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &htr LCTRL LG(DOWN)               &trans            &trans             &trans
+                        &trans  &trans  &trans  &trans
             >;
         };
 
         shifted_win_alt_left {
             bindings = <
-&kp LG(LA(LS(W)))  &kp LS(LG(LA(L)))  &kp LS(LA(LG(Z)))  &kp LS(LG(LA(P)))  &kp LG(LA(LS(B)))    &trans  &trans  &trans  &trans  &trans
-&kp LS(LA(LG(C)))  &kp LS(LG(LA(R)))  &kp LS(LG(LA(S)))  &kp LS(LG(LA(T)))  &kp LS(LA(LG(H)))    &trans  &trans  &trans  &trans  &trans
-&kp LS(LA(LG(Q)))  &kp LS(LG(LA(J)))  &kp LS(LA(LG(V)))  &kp LS(LA(LG(D)))  &kp LS(LA(LG(K)))    &trans  &trans  &trans  &trans  &trans
-                                                         &trans             &trans               &trans  &trans
+&kp LG(LA(LS(W)))  &kp LS(LG(LA(L)))  &kp LS(LA(LG(Z)))  &kp LS(LG(LA(P)))  &kp LG(LA(LS(B)))  &trans  &trans  &trans  &trans  &trans
+&kp LS(LA(LG(C)))  &kp LS(LG(LA(R)))  &kp LS(LG(LA(S)))  &kp LS(LG(LA(T)))  &kp LS(LA(LG(H)))  &trans  &trans  &trans  &trans  &trans
+&kp LS(LA(LG(Q)))  &kp LS(LG(LA(J)))  &kp LS(LA(LG(V)))  &kp LS(LA(LG(D)))  &kp LS(LA(LG(K)))  &trans  &trans  &trans  &trans  &trans
+                                                         &trans             &trans             &trans  &trans
             >;
         };
 
         shifted_win_ctrl_left {
             bindings = <
-&kp LG(LS(LC(W)))  &kp LS(LG(LC(L)))  &kp LS(LG(LC(Z)))  &kp LS(LG(LC(P)))  &kp LG(LS(LC(B)))    &trans  &trans  &trans  &trans  &trans
-&kp LS(LG(LC(C)))  &kp LS(LG(LC(R)))  &kp LS(LG(LC(S)))  &kp LS(LG(LC(T)))  &kp LS(LG(LC(H)))    &trans  &trans  &trans  &trans  &trans
-&kp LS(LG(LC(Q)))  &kp LS(LG(LC(J)))  &kp LS(LG(LC(V)))  &kp LS(LG(LC(D)))  &kp LS(LG(LC(K)))    &trans  &trans  &trans  &trans  &trans
-                                                         &trans             &trans               &trans  &trans
+&kp LG(LS(LC(W)))  &kp LS(LG(LC(L)))  &kp LS(LG(LC(Z)))  &kp LS(LG(LC(P)))  &kp LG(LS(LC(B)))  &trans  &trans  &trans  &trans  &trans
+&kp LS(LG(LC(C)))  &kp LS(LG(LC(R)))  &kp LS(LG(LC(S)))  &kp LS(LG(LC(T)))  &kp LS(LG(LC(H)))  &trans  &trans  &trans  &trans  &trans
+&kp LS(LG(LC(Q)))  &kp LS(LG(LC(J)))  &kp LS(LG(LC(V)))  &kp LS(LG(LC(D)))  &kp LS(LG(LC(K)))  &trans  &trans  &trans  &trans  &trans
+                                                         &trans             &trans             &trans  &trans
             >;
         };
     };
 };
-
