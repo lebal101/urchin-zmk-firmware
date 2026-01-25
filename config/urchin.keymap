@@ -536,11 +536,7 @@
         kp_then_sl: dollar_sl_right {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings =
-                <&macro_param_1to1>,
-                <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER &macro_param_2to1 &sl MACRO_PLACEHOLDER>;
-
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>, <&macro_param_2to1 &sl MACRO_PLACEHOLDER>;
             label = "DOLLAR_SL_RIGHT";
         };
 
@@ -548,65 +544,8 @@
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings =
-                <&macro_param_1to1>,
-                <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER &macro_param_2to1 &to MACRO_PLACEHOLDER>;
-
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>, <&macro_param_2to1 &to MACRO_PLACEHOLDER>;
             label = "NEW_MACRO";
-        };
-
-        cancel_mod_tap_and_to: cancel_mod_tap_and_to {
-            compatible = "zmk,behavior-macro-two-param";
-            #binding-cells = <2>;
-            bindings =
-                <&kp K_CANCEL &macro_param_1to1>,
-                <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER &macro_param_2to1 &to MACRO_PLACEHOLDER>;
-
-            label = "CANCEL_MOD_TAP_AND_TO";
-        };
-
-        to_default_and_sl: sk_and_back_to_default {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_tap>,
-                <&to 0 &macro_param_1to1 &sl MACRO_PLACEHOLDER>;
-
-            label = "SK_AND_BACK_TO_DEFAULT";
-        };
-
-        cancel_mod_and_to: cancel_mod_and_to {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&kp K_CANCEL &macro_param_1to1>,
-                <&macro_tap>,
-                <&to MACRO_PLACEHOLDER>;
-
-            label = "CANCEL_MOD_AND_TO";
-        };
-
-        tap_and_to0: tap_and_to0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_param_1to1>,
-                <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER &to 0>;
-
-            label = "TAP_AND_TO0";
-        };
-
-        tap_and_to_numstay: tap_and_to_numstay {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_param_1to1>,
-                <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER &to 22>;
-
-            label = "TAP_AND_TO_NUMSTAY";
         };
 
         backtick_space: backtick_space {
@@ -620,48 +559,16 @@
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings =
-                <&macro_param_1to1>,
-                <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER &macro_param_2to1 &sl_fast MACRO_PLACEHOLDER>;
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,  <&macro_param_2to1 &sl_fast MACRO_PLACEHOLDER>;
 
             label = "KP_THEN_SL_FAST";
-        };
-
-        equal_arrow: equal_arrow {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp EQUAL &kp LS(NON_US_BSLH)>;
-            label = "EQUAL_ARROW";
-        };
-
-        minus_arrow: minus_arrow {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SLASH &kp LS(NON_US_BSLH)>;
-            label = "MINUS_ARROW";
-        };
-
-        lte: lte {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp NON_US_BSLH &kp LS(N0)>;
-            label = "LTE";
-        };
-
-        gte: gte {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(NON_US_BSLH) &kp LS(N0)>;
-            label = "GTE";
         };
 
         kp_then_sl_slow: kp_then_sl_slow {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
             bindings =
-                <&macro_param_1to1>,
-                <&macro_tap>,
-                <&kp MACRO_PLACEHOLDER &macro_param_2to1 &sl_slow MACRO_PLACEHOLDER>;
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>, <&macro_param_2to1 &sl_slow MACRO_PLACEHOLDER>;
 
             label = "KP_THEN_SL_SLOW";
         };
