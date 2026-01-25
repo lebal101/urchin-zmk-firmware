@@ -645,15 +645,6 @@
 
         // Used to change the keyboard's settings.
 
-        settings_layer {
-            label = "Sett.";
-            bindings = <
-&bootloader     &none  &none  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 3  &none  &unstick  &none  &bootloader
-&none           &none  &none  &none       &bt BT_SEL 1  &bt BT_SEL 4  &none  &none     &none  &none
-&studio_unlock  &none  &none  &none       &bt BT_SEL 2  &bt BT_SEL 5  &none  &none     &none  &studio_unlock
-                              &none       &none         &none         &none
-            >;
-        };
         default_layer {
             bindings = <
 &ltl 21 W                         &kp L                 &htl_undec LGUI Z  &htl LEFT_CONTROL P        &kp B                     &kp Y              &htr LCTRL F        &htr_undec LGUI O  &kp U                 &ltr_end_shifted_home 21 0
@@ -921,6 +912,16 @@
 &trans  &trans  &trans  &trans  &trans    &trans  &ltr 17 LG(LEFT)                  &kp LG(RIGHT)     &kp LC(LG(RIGHT))  &trans
 &trans  &trans  &trans  &trans  &trans    &trans  &htr LCTRL LG(DOWN)               &trans            &trans             &trans
                         &trans  &trans    &trans  &trans
+            >;
+        };
+
+        settings_layer {
+            label = "Sett.";
+            bindings = <
+&bootloader     &none  &none  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 3  &none  &unstick  &none  &bootloader
+&none           &none  &none  &none       &bt BT_SEL 1  &bt BT_SEL 4  &none  &none     &none  &none
+&studio_unlock  &none  &none  &none       &bt BT_SEL 2  &bt BT_SEL 5  &none  &none     &none  &studio_unlock
+                              &none       &none         &none         &none
             >;
         };
     };
