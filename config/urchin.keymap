@@ -495,6 +495,12 @@
             key-positions = <26 27>;
             layers = <5>;
         };
+
+        to_default2 {
+            bindings = <&to 0>;
+            key-positions = <22 23>;
+            layers = <3>;
+        };
     };
 
     macros {
@@ -555,7 +561,7 @@
 
         left_left_thumb {
             bindings = <
-&kp LG(LA(TAB))      &kp LG(LA(UP_ARROW))  &none                           &none                    &trans  &kp LA(LG(RIGHT))            &kp LG(DOWN)                     &kp SEMICOLON                     &kp LEFT_BRACKET  &kp LG(END)
+&kp LG(LA(TAB))      &kp LG(LA(UP_ARROW))  &none                           &kp LC(F)                &none   &kp LA(LG(RIGHT))            &kp LG(DOWN)                     &kp SEMICOLON                     &kp LEFT_BRACKET  &kp LG(END)
 &kp_then_sl LC(A) 1  &kp LC(S)             &tap_and_to LG(LA(UP_ARROW)) 2  &kp_then_sl LG(RIGHT) 2  &none   &kp_then_sl LC(LG(RIGHT)) 1  &trans                           &trans                            &trans            &kp SQT
 &kp LC(Y)            &kp LC(X)             &kp_then_sl LS(LC(TAB)) 3       &kp_then_sl LC(TAB) 3    &none   &trans                       &kp_then_sl_slow LS(LG(LEFT)) 6  &kp_then_sl_slow LS(LG(RIGHT)) 6  &trans            &trans
                                                                            &trans                   &trans  &trans                       &trans
@@ -564,19 +570,19 @@
 
         left_left_thumb_ws_arrows_stay {
             bindings = <
-&trans  &trans  &trans        &trans         &trans  &trans        &kp LG(LS(DOWN))  &kp LG(LS(UP_ARROW))  &trans       &trans
-&trans  &trans  &kp LG(LEFT)  &kp LG(RIGHT)  &trans  &kp LG(HOME)  &kp LG(DOWN)      &kp LG(UP)            &kp LG(END)  &trans
-&trans  &trans  &trans        &trans         &trans  &trans        &kp LG(LS(LEFT))  &kp LG(LS(RIGHT))     &trans       &trans
-                              &trans         &trans  &trans        &trans
+&trans  &trans  &trans        &trans                 &trans  &trans        &kp LG(LS(DOWN))  &kp LG(LS(UP_ARROW))  &trans       &trans
+&trans  &trans  &kp LG(LEFT)  &kp LG(RIGHT)          &trans  &kp LG(HOME)  &kp LG(DOWN)      &kp LG(UP)            &kp LG(END)  &trans
+&trans  &trans  &trans        &kp LS(LG(BACKSPACE))  &trans  &trans        &kp LG(LS(LEFT))  &kp LG(LS(RIGHT))     &trans       &trans
+                              &trans                 &trans  &trans        &trans
             >;
         };
 
         left_left_thumb_tab {
             bindings = <
-&trans  &trans  &trans                          &trans                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans                          &trans                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp_then_sl_slow LC(LS(TAB)) 3  &kp_then_sl_slow LC(TAB) 3  &trans  &trans  &trans  &trans  &trans  &trans
-                                                &trans                      &trans  &trans  &trans
+&kp_then_sl_slow LC(W) 3  &trans  &trans                          &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans                    &trans  &trans                          &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans                    &trans  &kp_then_sl_slow LC(LS(TAB)) 3  &kp_then_sl_slow LC(TAB) 3  &trans  &trans  &trans  &trans  &trans  &trans
+                                                                  &trans                      &trans  &trans  &trans
             >;
         };
 
