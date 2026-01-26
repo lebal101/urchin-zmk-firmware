@@ -504,7 +504,7 @@
 
         to_default3 {
             bindings = <&to 0>;
-            key-positions = <22 23>;
+            key-positions = <12 13>;
             layers = <2>;
         };
     };
