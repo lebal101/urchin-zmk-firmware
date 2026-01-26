@@ -419,11 +419,6 @@
             timeout-ms = <30>;
         };
 
-        combo_sz {
-            bindings = <&kp MINUS>;
-            key-positions = <22 23>;
-        };
-
         asdf {
             bindings = <&tog 18>;
             key-positions = <31 30 32 33>;
@@ -474,7 +469,7 @@
         };
 
         shift_copy {
-            bindings = <&kp LC(LS(C))>;
+            bindings = <&kp_then_sl_slow LC(LS(C)) 5>;
             key-positions = <22 21 23>;
             layers = <1>;
         };
