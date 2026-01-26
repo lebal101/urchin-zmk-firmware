@@ -489,6 +489,12 @@
             bindings = <&tap_and_to ENTER 0>;
             key-positions = <13 14>;
         };
+
+        to_default {
+            bindings = <&to 0>;
+            key-positions = <26 27>;
+            layers = <5>;
+        };
     };
 
     macros {
