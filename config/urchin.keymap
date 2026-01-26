@@ -544,9 +544,9 @@
 
         left_left_thumb {
             bindings = <
-&kp LG(LA(TAB))      &kp LG(LA(UP_ARROW))  &kp_then_sl LC(LS(TAB)) 6  &kp_then_sl LC(TAB) 6    &trans  &kp LA(LG(RIGHT))            &kp LG(DOWN)                     &kp LG(UP_ARROW)                  &kp LEFT_BRACKET  &kp LG(END)
+&kp LG(LA(TAB))      &kp LG(LA(UP_ARROW))  &none                      &none                    &trans  &kp LA(LG(RIGHT))            &kp LG(DOWN)                     &kp LG(UP_ARROW)                  &kp LEFT_BRACKET  &kp LG(END)
 &kp_then_sl LC(A) 1  &kp LC(S)             &kp_then_sl LG(LEFT) 4     &kp_then_sl LG(RIGHT) 3  &none   &kp_then_sl LC(LG(RIGHT)) 1  &trans                           &trans                            &trans            &kp SQT
-&kp LC(Y)            &kp LC(X)             &none                      &none                    &none   &trans                       &kp_then_sl_slow LS(LG(LEFT)) 9  &kp_then_sl_slow LS(LG(RIGHT)) 9  &trans            &trans
+&kp LC(Y)            &kp LC(X)             &kp_then_sl LS(LC(TAB)) 6  &kp_then_sl LC(TAB) 6    &none   &trans                       &kp_then_sl_slow LS(LG(LEFT)) 9  &kp_then_sl_slow LS(LG(RIGHT)) 9  &trans            &trans
                                                                       &trans                   &trans  &trans                       &trans
             >;
         };
