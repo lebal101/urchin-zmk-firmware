@@ -484,6 +484,11 @@
             key-positions = <17 16>;
             timeout-ms = <15>;
         };
+
+        another_enter {
+            bindings = <&tap_and_to ENTER 0>;
+            key-positions = <13 14>;
+        };
     };
 
     macros {
