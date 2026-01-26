@@ -573,10 +573,10 @@
 
         left_left_thumb_tab {
             bindings = <
-&trans  &trans  &trans                          &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans                          &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp_then_sl_slow LC(LS(TAB)) 3  &kp_then_sl_slow LC(T) 3  &trans  &trans  &trans  &trans  &trans  &trans
-                                                &trans                    &trans  &trans  &trans
+&trans  &trans  &trans                          &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans                          &trans                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp_then_sl_slow LC(LS(TAB)) 3  &kp_then_sl_slow LC(TAB) 3  &trans  &trans  &trans  &trans  &trans  &trans
+                                                &trans                      &trans  &trans  &trans
             >;
         };
 
