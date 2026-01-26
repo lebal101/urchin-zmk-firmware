@@ -481,7 +481,7 @@
 
         shift_copy {
             bindings = <&kp LC(LS(C))>;
-            key-positions = <22 21>;
+            key-positions = <22 21 23>;
             layers = <1>;
         };
     };
