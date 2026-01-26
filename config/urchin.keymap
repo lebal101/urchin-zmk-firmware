@@ -489,6 +489,12 @@
             bindings = <&tap_and_to ESCAPE 0>;
             key-positions = <12 13>;
         };
+
+        bsp2 {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <17 16>;
+            timeout-ms = <15>;
+        };
     };
 
     macros {
