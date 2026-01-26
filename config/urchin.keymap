@@ -561,10 +561,10 @@
 
         left_left_thumb {
             bindings = <
-&kp LG(LA(TAB))      &kp LG(LA(UP_ARROW))  &none                           &kp LC(F)                &none   &kp LA(LG(RIGHT))            &kp LG(DOWN)                     &kp SEMICOLON                     &kp LEFT_BRACKET  &kp LG(END)
-&kp_then_sl LC(A) 1  &kp LC(S)             &tap_and_to LG(LA(UP_ARROW)) 2  &kp_then_sl LG(RIGHT) 2  &none   &kp_then_sl LC(LG(RIGHT)) 1  &trans                           &trans                            &trans            &kp SQT
-&kp LC(Y)            &kp LC(X)             &kp_then_sl LS(LC(TAB)) 3       &kp_then_sl LC(TAB) 3    &none   &trans                       &kp_then_sl_slow LS(LG(LEFT)) 6  &kp_then_sl_slow LS(LG(RIGHT)) 6  &trans            &trans
-                                                                           &trans                   &trans  &trans                       &trans
+&trans               &kp LG(LA(UP_ARROW))  &none                           &kp LC(F)                  &none   &kp LA(LG(RIGHT))            &kp LG(DOWN)                     &kp SEMICOLON                     &kp LEFT_BRACKET  &kp LG(END)
+&kp_then_sl LC(A) 1  &kp LC(S)             &tap_and_to LG(LA(UP_ARROW)) 2  &kp_then_sl LG(LA(TAB)) 2  &none   &kp_then_sl LC(LG(RIGHT)) 1  &trans                           &trans                            &trans            &kp SQT
+&kp LC(Y)            &kp LC(X)             &kp_then_sl LS(LC(TAB)) 3       &kp_then_sl LC(TAB) 3      &none   &trans                       &kp_then_sl_slow LS(LG(LEFT)) 6  &kp_then_sl_slow LS(LG(RIGHT)) 6  &trans            &trans
+                                                                           &trans                     &trans  &trans                       &trans
             >;
         };
 
