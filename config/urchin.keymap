@@ -147,14 +147,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_WSNAV";
             #binding-cells = <0>;
-            bindings = <&lt 20 TAB>, <&mo 13>;
+            bindings = <&lt 17 TAB>, <&mo 10>;
         };
 
         sticky_number_shift_capsword: sticky_number_shift_capsword {
             compatible = "zmk,behavior-tap-dance";
             label = "STICKY_NUMBER_SHIFT_CAPSWORD";
             #binding-cells = <0>;
-            bindings = <&tsk_hmo 11 RSHFT>, <&caps_word>;
+            bindings = <&tsk_hmo 8 RSHFT>, <&caps_word>;
         };
 
         lazy_sl: lazy_sl {
@@ -262,7 +262,7 @@
         t_sp_h_cmd_morph_caps: t_sp_h_cmd_morph_caps {
             compatible = "zmk,behavior-mod-morph";
             label = "T_SP_H_CMD_MORPH_CAPS";
-            bindings = <&lt 15 SPACE>, <&t_capsw_h_mo 15 0>;
+            bindings = <&lt 12 SPACE>, <&t_capsw_h_mo 12 0>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
@@ -293,7 +293,7 @@
         t_T_h_Arr_m_ShiftArr: t_T_h_Arr_m_ShiftArr {
             compatible = "zmk,behavior-mod-morph";
             label = "T_T_H_ARR_M_SHIFTARR";
-            bindings = <&ltl 10 T>, <&ltl 0 T>;
+            bindings = <&ltl 7 T>, <&ltl 0 T>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT)>;
@@ -384,7 +384,7 @@
         h_winAlt_t_n_stay_shifted: h_winAlt_t_n_stay_shifted {
             compatible = "zmk,behavior-mod-morph";
             label = "H_WINALT_T_N_STAY_SHIFTED";
-            bindings = <&htr LA(LEFT_GUI) N>, <&ltr 25 LG(N)>;
+            bindings = <&htr LA(LEFT_GUI) N>, <&ltr 22 LG(N)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -394,7 +394,7 @@
         h_winCtl_t_m_stay_shifted: h_winCtl_t_m_stay_shifted {
             compatible = "zmk,behavior-mod-morph";
             label = "H_WINCTL_T_M_STAY_SHIFTED";
-            bindings = <&htr_undec LC(LEFT_GUI) M>, <&ltr 26 LG(M)>;
+            bindings = <&htr_undec LC(LEFT_GUI) M>, <&ltr 23 LG(M)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -425,13 +425,13 @@
         };
 
         backspace_num {
-            bindings = <&tap_and_to BACKSPACE 22>;
+            bindings = <&tap_and_to BACKSPACE 19>;
             key-positions = <17 18>;
-            layers = <22>;
+            layers = <19>;
         };
 
         asdf {
-            bindings = <&tog 21>;
+            bindings = <&tog 18>;
             key-positions = <31 30 32 33>;
         };
 
@@ -484,6 +484,11 @@
             key-positions = <22 21 23>;
             layers = <1>;
         };
+
+        esc2 {
+            bindings = <&tap_and_to ESCAPE 0>;
+            key-positions = <12 13>;
+        };
     };
 
     macros {
@@ -535,53 +540,26 @@
 
         default_layer {
             bindings = <
-&ltl 17 W                         &kp L                 &htl_undec LGUI Z  &htl LEFT_CONTROL P        &kp B                   &kp Y            &htr LCTRL F        &htr_undec LGUI O    &kp U                 &ltr_end_shifted_home 17 0
+&ltl 14 W                         &kp L                 &htl_undec LGUI Z  &htl LEFT_CONTROL P        &kp B                   &kp Y            &htr LCTRL F        &htr_undec LGUI O    &kp U                 &ltr_end_shifted_home 14 0
 &htl_undec_idle_req LEFT_SHIFT C  &htl_idle_req LALT R  &kp S              &t_T_h_Arr_m_ShiftArr      &kp G                   &htr LC(LGUI) M  &htr LA(LGUI) N     &htr LA(LC(LGUI)) E  &htr_idle_req LALT I  &htr_undec_idle_req LSHIFT A
-&ltr 16 Q                         &kp J                 &kp V              &htl_undec LEFT_CONTROL D  &kp K                   &kp X            &htr_undec LCTRL H  &kp COMMA            &kp DOT               &ltr 16 SEMICOLON
-                                                                           &sl 1                      &t_sp_h_cmd_morph_caps  &sl 7            &tsk_hmo 11 LSHIFT
+&ltr 13 Q                         &kp J                 &kp V              &htl_undec LEFT_CONTROL D  &kp K                   &kp X            &htr_undec LCTRL H  &kp COMMA            &kp DOT               &ltr 13 SEMICOLON
+                                                                           &sl 1                      &t_sp_h_cmd_morph_caps  &sl 4            &tsk_hmo 8 LSHIFT
             >;
         };
 
         left_left_thumb {
             bindings = <
-&kp LG(LA(TAB))      &kp LG(LA(UP_ARROW))  &none                      &none                    &trans  &kp LA(LG(RIGHT))            &kp LG(DOWN)                     &kp LG(UP_ARROW)                  &kp LEFT_BRACKET  &kp LG(END)
-&kp_then_sl LC(A) 1  &kp LC(S)             &kp_then_sl LG(LEFT) 4     &kp_then_sl LG(RIGHT) 3  &none   &kp_then_sl LC(LG(RIGHT)) 1  &trans                           &trans                            &trans            &kp SQT
-&kp LC(Y)            &kp LC(X)             &kp_then_sl LS(LC(TAB)) 6  &kp_then_sl LC(TAB) 6    &none   &trans                       &kp_then_sl_slow LS(LG(LEFT)) 9  &kp_then_sl_slow LS(LG(RIGHT)) 9  &trans            &trans
+&kp LG(LA(TAB))      &kp LG(LA(UP_ARROW))  &none                      &none                    &trans  &kp LA(LG(RIGHT))            &kp LG(DOWN)                     &kp SEMICOLON                     &kp LEFT_BRACKET  &kp LG(END)
+&kp_then_sl LC(A) 1  &kp LC(S)             &kp_then_sl LG(LEFT) 2     &kp_then_sl LG(RIGHT) 2  &none   &kp_then_sl LC(LG(RIGHT)) 1  &trans                           &trans                            &trans            &kp SQT
+&kp LC(Y)            &kp LC(X)             &kp_then_sl LS(LC(TAB)) 3  &kp_then_sl LC(TAB) 3    &none   &trans                       &kp_then_sl_slow LS(LG(LEFT)) 6  &kp_then_sl_slow LS(LG(RIGHT)) 6  &trans            &trans
                                                                       &trans                   &trans  &trans                       &trans
             >;
         };
 
-        arrows {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                         &trans                   &trans                       &trans                    &trans
-&trans  &trans  &trans  &trans  &trans  &trans                         &trans                   &trans                       &trans                    &trans
-&trans  &trans  &trans  &trans  &trans  &kp_then_sl_slow LEFT_ARROW 2  &kp_then_sl_slow DOWN 2  &kp_then_sl_slow UP_ARROW 2  &kp_then_sl_slow RIGHT 2  &trans
-                        &trans  &trans  &trans                         &trans
-            >;
-        };
-
-        left_left_thumb_ws_move_right {
-            bindings = <
-&trans  &trans  &trans        &trans                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LG(LEFT)  &kp_then_sl LG(RIGHT) 3  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans        &trans                   &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans                   &trans  &trans  &trans
-            >;
-        };
-
-        left_left_thumb_ws_move_left {
-            bindings = <
-&trans  &trans  &trans                  &trans         &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp_then_sl LG(LEFT) 5  &kp LG(RIGHT)  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans                  &trans         &trans  &trans  &trans  &trans  &trans  &trans
-                                        &trans         &trans  &trans  &trans
-            >;
-        };
-
-        left_left_thumb_ws_move_stay {
+        left_left_thumb_ws_arrows_stay {
             bindings = <
 &trans  &trans  &trans                  &trans                   &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp_then_sl LG(LEFT) 5  &kp_then_sl LG(RIGHT) 5  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp_then_sl LG(LEFT) 2  &kp_then_sl LG(RIGHT) 2  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans                  &trans                   &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans                   &trans  &trans  &trans
             >;
@@ -591,7 +569,7 @@
             bindings = <
 &trans  &trans  &trans                          &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans                          &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp_then_sl_slow LC(LS(TAB)) 6  &kp_then_sl_slow LC(T) 6  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp_then_sl_slow LC(LS(TAB)) 3  &kp_then_sl_slow LC(T) 3  &trans  &trans  &trans  &trans  &trans  &trans
                                                 &trans                    &trans  &trans  &trans
             >;
         };
@@ -600,7 +578,7 @@
             bindings = <
 &kp LS(RIGHT_BRACKET)  &kp LS(NUMBER_5)  &kp RA(N8)                            &kp RA(N9)  &kp RA(NON_US_BACKSLASH)  &backtick_space                 &kp_then_sl_fast LS(NUMBER_4) 0  &kp LS(MINUS)                 &kp_then_sl_fast RIGHT_BRACKET 0  &kp LS(NUMBER_1)
 &kp LS(N8)             &kp SLASH         &lt 0 LS(SLASH)                       &kp LS(N9)  &kp NON_US_HASH           &htr_undec LC(LS(LGUI)) RA(N0)  &kp LS(N0)                       &lt 0 LS(NON_US_HASH)         &kp LS(NUMBER_2)                  &kp RA(N7)
-&kp RA(Q)              &kp RA(MINUS)     &kp_then_sl_fast RA(RIGHT_BRACKET) 0  &kp LS(N7)  &kp LS(NUMBER_6)          &kp NON_US_BSLH                 &kp_then_sl_slow LG(LEFT) 8      &kp_then_sl_slow LG(RIGHT) 8  &kp LS(NON_US_BSLH)               &kp RA(E)
+&kp RA(Q)              &kp RA(MINUS)     &kp_then_sl_fast RA(RIGHT_BRACKET) 0  &kp LS(N7)  &kp LS(NUMBER_6)          &kp NON_US_BSLH                 &kp_then_sl_slow LG(LEFT) 5      &kp_then_sl_slow LG(RIGHT) 5  &kp LS(NON_US_BSLH)               &kp RA(E)
                                                                                &trans      &trans                    &trans                          &trans
             >;
         };
@@ -609,7 +587,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                       &trans                        &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                       &trans                        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp_then_sl_slow LG(LEFT) 8  &kp_then_sl_slow LG(RIGHT) 8  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp_then_sl_slow LG(LEFT) 5  &kp_then_sl_slow LG(RIGHT) 5  &trans  &trans
                         &trans  &trans  &trans  &trans
             >;
         };
@@ -618,7 +596,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                           &trans                            &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                           &trans                            &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp_then_sl_slow LG(LS(LEFT)) 9  &kp_then_sl_slow LG(LS(RIGHT)) 9  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp_then_sl_slow LG(LS(LEFT)) 6  &kp_then_sl_slow LG(LS(RIGHT)) 6  &trans  &trans
                         &trans  &trans  &trans  &trans
             >;
         };
@@ -628,16 +606,16 @@
 &trans  &trans  &trans  &trans  &trans             &none         &kp PAGE_DOWN  &kp PG_UP     &none          &none
 &trans  &trans  &trans  &trans  &trans             &kp LEFT      &kp DOWN       &kp UP_ARROW  &kp RIGHT      &kp END
 &trans  &trans  &trans  &trans  &trans             &kp LC(LEFT)  &kp HOME       &none         &kp LC(RIGHT)  &none
-                        &mo 23  &kp RIGHT_CONTROL  &kp RSHIFT    &trans
+                        &mo 20  &kp RIGHT_CONTROL  &kp RSHIFT    &trans
             >;
         };
 
         numbers_layer {
             bindings = <
-&none   &kp N8  &kp N9           &kp N0            &none   &none   &none      &none      &none    &none
-&kp N1  &kp N2  &ltl 0 NUMBER_3  &ltl 10 NUMBER_4  &none   &none   &ltr 0 N7  &ltr 0 N8  &kp N9   &kp N0
-&none   &kp N7  &kp N6           &kp N5            &none   &none   &kp N6     &kp COMMA  &kp DOT  &none
-                                 &trans            &trans  &trans  &trans
+&none   &kp N8  &kp N9           &kp N0           &none   &none   &none      &none      &none    &none
+&kp N1  &kp N2  &ltl 0 NUMBER_3  &ltl 7 NUMBER_4  &none   &none   &ltr 0 N7  &ltr 0 N8  &kp N9   &kp N0
+&none   &kp N7  &kp N6           &kp N5           &none   &none   &kp N6     &kp COMMA  &kp DOT  &none
+                                 &trans           &trans  &trans  &trans
             >;
         };
 
@@ -689,7 +667,7 @@
         bt_reset_trans_left {
             bindings = <
 &none   &none  &none  &none       &bt BT_SEL 0  &none  &none  &none  &none  &none
-&mo 20  &none  &none  &none       &bt BT_SEL 1  &none  &none  &none  &none  &mo 20
+&mo 17  &none  &none  &none       &bt BT_SEL 1  &none  &none  &none  &none  &mo 17
 &none   &none  &none  &bt BT_CLR  &bt BT_SEL 2  &none  &none  &none  &none  &none
                       &none       &none         &none  &none
             >;
@@ -698,7 +676,7 @@
         bt_reset_trans_right {
             bindings = <
 &none   &none  &none  &none  &none  &none  &none  &none  &none  &none
-&mo 20  &none  &none  &none  &none  &none  &none  &none  &none  &mo 20
+&mo 17  &none  &none  &none  &none  &none  &none  &none  &none  &mo 17
 &none   &none  &none  &none  &none  &none  &none  &none  &none  &none
                       &none  &none  &none  &none
             >;
@@ -724,10 +702,10 @@
 
         qwerty_with_mods {
             bindings = <
-&ltl 17 Q                         &kp W                 &htl LGUI E  &htl LEFT_CONTROL R        &kp T                   &kp Y              &htr LCTRL U             &htr LGUI I  &kp O                 &ltr 18 TAB
-&htl_undec_idle_req LEFT_SHIFT A  &htl_idle_req LALT S  &ltl 0 D     &ltl 10 F                  &kp G                   &kp H              &ltr_idle_required 13 J  &ltr 0 K     &htr_idle_req LALT L  &htr_undec_idle_req LSHIFT P
-&ltr 16 Z                         &kp X                 &kp C        &htl_undec LEFT_CONTROL V  &kp B                   &kp N              &htr_undec LCTRL M       &kp COMMA    &kp DOT               &h_mo_t_to_r 16 22
-                                                                     &lt 19 ENTER               &t_sp_h_cmd_morph_caps  &tsk_hmo 11 RSHFT  &sl_fast 0
+&ltl 14 Q                         &kp W                 &htl LGUI E  &htl LEFT_CONTROL R        &kp T                   &kp Y             &htr LCTRL U             &htr LGUI I  &kp O                 &ltr 15 TAB
+&htl_undec_idle_req LEFT_SHIFT A  &htl_idle_req LALT S  &ltl 0 D     &ltl 7 F                   &kp G                   &kp H             &ltr_idle_required 10 J  &ltr 0 K     &htr_idle_req LALT L  &htr_undec_idle_req LSHIFT P
+&ltr 13 Z                         &kp X                 &kp C        &htl_undec LEFT_CONTROL V  &kp B                   &kp N             &htr_undec LCTRL M       &kp COMMA    &kp DOT               &h_mo_t_to_r 13 19
+                                                                     &lt 16 ENTER               &t_sp_h_cmd_morph_caps  &tsk_hmo 8 RSHFT  &sl_fast 0
             >;
         };
 
@@ -752,7 +730,7 @@
         ws_move {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &kp_then_sl_fast LG(RA(RIGHT)) 0  &kp LG(UP_ARROW)  &trans             &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &ltr 13 LG(LEFT)                  &kp LG(RIGHT)     &kp LC(LG(RIGHT))  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &ltr 10 LG(LEFT)                  &kp LG(RIGHT)     &kp LC(LG(RIGHT))  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &htr LCTRL LG(DOWN)               &trans            &trans             &trans
                         &trans  &trans  &trans  &trans
             >;
