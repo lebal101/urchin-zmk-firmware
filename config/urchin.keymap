@@ -469,7 +469,7 @@
         };
 
         copy {
-            bindings = <&kp LC(C)>;
+            bindings = <&kp_then_sl_slow LC(C) 5>;
             key-positions = <22 21>;
         };
 
