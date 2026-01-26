@@ -589,10 +589,10 @@
 
         left_left_thumb_tab {
             bindings = <
-&trans  &trans  &kp_then_sl LC(LS(TAB)) 6  &kp_then_sl LC(TAB) 6  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans                     &trans                 &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans                     &trans                 &trans  &trans  &trans  &trans  &trans  &trans
-                                           &trans                 &trans  &trans  &trans
+&trans  &trans  &trans                          &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans                          &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp_then_sl_slow LC(LS(TAB)) 6  &kp_then_sl_slow LC(T) 6  &trans  &trans  &trans  &trans  &trans  &trans
+                                                &trans                    &trans  &trans  &trans
             >;
         };
 
