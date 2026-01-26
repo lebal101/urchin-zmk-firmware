@@ -564,9 +564,9 @@
 
         left_left_thumb_ws_arrows_stay {
             bindings = <
-&trans  &trans  &trans        &trans         &trans  &trans        &trans            &trans             &trans       &trans
-&trans  &trans  &kp LG(LEFT)  &kp LG(RIGHT)  &trans  &kp LG(HOME)  &kp DOWN          &kp UP             &kp LG(END)  &trans
-&trans  &trans  &trans        &trans         &trans  &trans        &kp LG(LS(LEFT))  &kp LG(LS(RIGHT))  &trans       &trans
+&trans  &trans  &trans        &trans         &trans  &trans        &kp LG(LS(DOWN))  &kp LG(LS(UP_ARROW))  &trans       &trans
+&trans  &trans  &kp LG(LEFT)  &kp LG(RIGHT)  &trans  &kp LG(HOME)  &kp LG(DOWN)      &kp LG(UP)            &kp LG(END)  &trans
+&trans  &trans  &trans        &trans         &trans  &trans        &kp LG(LS(LEFT))  &kp LG(LS(RIGHT))     &trans       &trans
                               &trans         &trans  &trans        &trans
             >;
         };
