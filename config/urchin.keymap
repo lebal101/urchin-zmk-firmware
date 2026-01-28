@@ -402,7 +402,19 @@
         };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        tab_window_switch {
+            if-layers = <3>;
+            then-layer = <5>;
+        };
+
+        window_tab_switch {
+            if-layers = <5>;
+            then-layer = <3>;
+        };
+    };
 
     combos {
         compatible = "zmk,combos";
