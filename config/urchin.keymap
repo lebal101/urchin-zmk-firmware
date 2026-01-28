@@ -588,7 +588,7 @@
         kp_then_sl_slow__ws_lr: kp_then_sl_slow__ws_lr {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &sl_slow 5>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>, <&sl_slow 5>;
             label = "KP_THEN_SL_SLOW__WS_LR";
         };
     };
