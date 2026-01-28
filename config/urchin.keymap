@@ -400,6 +400,21 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        htr_undec_then_sl_slow__ws_lr: htr_undec_then_sl_slow__ws_lr {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HTR_UNDEC_THEN_SL_SLOW__WS_LR";
+            bindings = <&kp>, <&kp_then_sl_slow__ws_lr>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <350>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31 32 33>;
+            require-prior-idle-ms = <3>;
+            quick-tap-ms = <175>;
+            hold-while-undecided;
+            hold-trigger-on-release;
+        };
     };
 
     conditional_layers {
@@ -569,6 +584,13 @@
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &sl_slow MACRO_PLACEHOLDER>;
             label = "KP_THEN_SL_SLOW";
         };
+
+        kp_then_sl_slow__ws_lr: kp_then_sl_slow__ws_lr {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &sl_slow 5>;
+            label = "KP_THEN_SL_SLOW__WS_LR";
+        };
     };
 
     keymap {
@@ -621,9 +643,9 @@
 
         rtl_ws_lr {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                       &trans                        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                       &trans                        &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp_then_sl_slow LG(LEFT) 5  &kp_then_sl_slow LG(RIGHT) 5  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans                        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                                                    &trans                        &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &htr_undec_then_sl_slow__ws_lr LG(LEFT_CONTROL) LG(LEFT)  &kp_then_sl_slow LG(RIGHT) 5  &trans  &trans
                         &sl 1   &trans  &trans  &trans
             >;
         };
