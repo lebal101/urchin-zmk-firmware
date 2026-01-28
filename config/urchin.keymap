@@ -639,7 +639,7 @@
             bindings = <
 &kp LS(RIGHT_BRACKET)  &kp LS(NUMBER_5)  &kp RA(N8)                            &kp RA(N9)  &kp RA(NON_US_BACKSLASH)  &backtick_space                 &kp_then_sl_fast LS(NUMBER_4) 0  &kp LS(MINUS)                 &kp_then_sl_fast RIGHT_BRACKET 0  &kp LS(NUMBER_1)
 &kp LS(N8)             &kp SLASH         &lt 0 LS(SLASH)                       &kp LS(N9)  &kp NON_US_HASH           &htr_undec LC(LS(LGUI)) RA(N0)  &kp LS(N0)                       &lt 0 LS(NON_US_HASH)         &kp LS(NUMBER_2)                  &kp RA(N7)
-&kp RA(Q)              &kp RA(MINUS)     &kp_then_sl_fast RA(RIGHT_BRACKET) 0  &kp LS(N7)  &kp LS(NUMBER_6)          &kp NON_US_BSLH                 &kp_then_sl_slow LG(LEFT) 5      &kp_then_sl_slow LG(RIGHT) 5  &kp LS(NON_US_BSLH)               &kp RA(E)
+&kp RA(Q)              &kp RA(MINUS)     &kp_then_sl_fast RA(RIGHT_BRACKET) 0  &kp LS(N7)  &kp LS(NUMBER_6)          &kp NON_US_BSLH                 &kp_then_sl_slow LG(LEFT) 7      &kp_then_sl_slow LG(RIGHT) 7  &kp LS(NON_US_BSLH)               &kp RA(E)
                                                                                &trans      &trans                    &trans                          &trans
             >;
         };
