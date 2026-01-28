@@ -658,7 +658,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                           &trans                            &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                           &trans                            &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &kp_then_sl_slow LG(LS(LEFT)) 6  &kp_then_sl_slow LG(LS(RIGHT)) 6  &trans  &trans
-                        &trans  &trans  &trans  &trans
+                        &trans  &trans  &sl 4   &trans
             >;
         };
 
