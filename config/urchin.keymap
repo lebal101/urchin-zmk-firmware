@@ -407,7 +407,6 @@
     combos {
         compatible = "zmk,combos";
 
-
         to_default {
             bindings = <&to 0>;
             key-positions = <26 27>;
@@ -429,7 +428,7 @@
         combo_bspc {
             bindings = <&kp BACKSPACE>;
             key-positions = <17 18>;
-            timeout-ms = <15>;
+            timeout-ms = <25>;
         };
 
         combo_del {
@@ -497,15 +496,21 @@
             key-positions = <12 13>;
         };
 
-        bsp2 {
-            bindings = <&kp BACKSPACE>;
+        ctrl_bsp {
+            bindings = <&kp LC(BACKSPACE)>;
             key-positions = <17 16>;
-            timeout-ms = <15>;
+            timeout-ms = <25>;
         };
 
         another_enter {
             bindings = <&tap_and_to ENTER 0>;
             key-positions = <13 14>;
+        };
+
+        ctrl_bsp2 {
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <17 16 18>;
+            timeout-ms = <25>;
         };
     };
 
