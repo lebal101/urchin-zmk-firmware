@@ -503,15 +503,16 @@
             key-positions = <22 21 23>;
         };
 
-        esc2 {
-            bindings = <&tap_and_to ESCAPE 0>;
+        enter_hrl {
+            bindings = <&tap_and_to ENTER 0>;
             key-positions = <12 13>;
+            timeout-ms = <25>;
         };
 
-        ctrl_bsp {
-            bindings = <&kp LC(BACKSPACE)>;
+        esc_right {
+            bindings = <&tap_and_to ESCAPE 0>;
             key-positions = <17 16>;
-            timeout-ms = <25>;
+            timeout-ms = <20>;
         };
 
         another_enter {
@@ -522,7 +523,7 @@
         ctrl_bsp2 {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <17 16 18>;
-            timeout-ms = <25>;
+            timeout-ms = <35>;
         };
     };
 
