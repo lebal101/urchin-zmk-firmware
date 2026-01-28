@@ -147,7 +147,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TD_WSNAV";
             #binding-cells = <0>;
-            bindings = <&lt 17 TAB>, <&mo 10>;
+            bindings = <&lt 16 TAB>, <&mo 10>;
         };
 
         sticky_number_shift_capsword: sticky_number_shift_capsword {
@@ -384,7 +384,7 @@
         h_winAlt_t_n_stay_shifted: h_winAlt_t_n_stay_shifted {
             compatible = "zmk,behavior-mod-morph";
             label = "H_WINALT_T_N_STAY_SHIFTED";
-            bindings = <&htr LA(LEFT_GUI) N>, <&ltr 22 LG(N)>;
+            bindings = <&htr LA(LEFT_GUI) N>, <&ltr 21 LG(N)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -394,7 +394,7 @@
         h_winCtl_t_m_stay_shifted: h_winCtl_t_m_stay_shifted {
             compatible = "zmk,behavior-mod-morph";
             label = "H_WINCTL_T_M_STAY_SHIFTED";
-            bindings = <&htr_undec LC(LEFT_GUI) M>, <&ltr 23 LG(M)>;
+            bindings = <&htr_undec LC(LEFT_GUI) M>, <&ltr 22 LG(M)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -465,7 +465,7 @@
         };
 
         asdf {
-            bindings = <&tog 18>;
+            bindings = <&tog 17>;
             key-positions = <31 30 32 33>;
         };
 
@@ -664,7 +664,7 @@
 &trans  &trans  &trans  &trans  &trans             &none         &kp PAGE_DOWN  &kp PG_UP     &none          &none
 &trans  &trans  &trans  &trans  &trans             &kp LEFT      &kp DOWN       &kp UP_ARROW  &kp RIGHT      &kp END
 &trans  &trans  &trans  &trans  &trans             &kp LC(LEFT)  &kp HOME       &none         &kp LC(RIGHT)  &none
-                        &mo 20  &kp RIGHT_CONTROL  &kp RSHIFT    &trans
+                        &mo 19  &kp RIGHT_CONTROL  &kp RSHIFT    &trans
             >;
         };
 
@@ -724,28 +724,19 @@
 
         bt_reset_trans_left {
             bindings = <
-&none   &none  &sys_reset  &none       &bt BT_SEL 0  &none  &none  &sys_reset  &none  &none
-&mo 17  &none  &none       &none       &bt BT_SEL 1  &none  &none  &none       &none  &mo 17
-&none   &none  &none       &bt BT_CLR  &bt BT_SEL 2  &none  &none  &none       &none  &none
-                           &none       &none         &none  &none
+&none   &none  &none  &none       &bt BT_SEL 0  &none  &none  &sys_reset  &none  &none
+&mo 16  &none  &none  &none       &bt BT_SEL 1  &none  &none  &none       &none  &mo 16
+&none   &none  &none  &bt BT_CLR  &bt BT_SEL 2  &none  &none  &none       &none  &none
+                      &none       &none         &none  &none
             >;
         };
 
         bt_reset_trans_right {
             bindings = <
 &none   &none  &none  &none  &none  &none  &none  &none  &none  &none
-&mo 17  &none  &none  &none  &none  &none  &none  &none  &none  &mo 17
+&mo 16  &none  &none  &none  &none  &none  &none  &none  &none  &mo 16
 &none   &none  &none  &none  &none  &none  &none  &none  &none  &none
                       &none  &none  &none  &none
-            >;
-        };
-
-        media_alt_nav_depr {
-            bindings = <
-&kp C_VOLUME_DOWN    &kp C_VOL_UP     &kp LC(SLASH)  &kp LC(RIGHT_BRACKET)  &none  &none  &none             &kp LA(LC(UP_ARROW))  &none              &none
-&kp LS(LC(LA(TAB)))  &kp LS(LC(TAB))  &kp LC(TAB)    &kp LA(LC(TAB))        &none  &none  &kp LA(LC(LEFT))  &kp LA(LC(DOWN))      &kp LA(LC(RIGHT))  &kp LC(LA(END))
-&none                &none            &none          &none                  &none  &none  &kp LA(LC(HOME))  &none                 &none              &none
-                                                     &none                  &none  &none  &none
             >;
         };
 
@@ -762,8 +753,8 @@
             bindings = <
 &ltl 14 Q                         &kp W                 &htl LGUI E  &htl LEFT_CONTROL R        &kp T                   &kp Y             &htr LCTRL U             &htr LGUI I  &kp O                 &ltr 15 TAB
 &htl_undec_idle_req LEFT_SHIFT A  &htl_idle_req LALT S  &ltl 0 D     &ltl 7 F                   &kp G                   &kp H             &ltr_idle_required 10 J  &ltr 0 K     &htr_idle_req LALT L  &htr_undec_idle_req LSHIFT P
-&ltr 13 Z                         &kp X                 &kp C        &htl_undec LEFT_CONTROL V  &kp B                   &kp N             &htr_undec LCTRL M       &kp COMMA    &kp DOT               &h_mo_t_to_r 13 19
-                                                                     &lt 16 ENTER               &t_sp_h_cmd_morph_caps  &tsk_hmo 8 RSHFT  &sl_fast 0
+&ltr 13 Z                         &kp X                 &kp C        &htl_undec LEFT_CONTROL V  &kp B                   &kp N             &htr_undec LCTRL M       &kp COMMA    &kp DOT               &h_mo_t_to_r 13 18
+                                                                     &lt 0 ENTER                &t_sp_h_cmd_morph_caps  &tsk_hmo 8 RSHFT  &sl_fast 0
             >;
         };
 
