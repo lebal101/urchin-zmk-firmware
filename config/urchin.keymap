@@ -440,13 +440,13 @@
         to_default {
             bindings = <&to 0>;
             key-positions = <26 27>;
-            layers = <5>;
+            layers = <7>;
         };
 
         to_default2 {
             bindings = <&to 0>;
             key-positions = <22 23>;
-            layers = <3>;
+            layers = <7>;
         };
 
         to_default3 {
@@ -626,7 +626,7 @@
             >;
         };
 
-        left_left_thumb_tab {
+        left_left_thumb_tab__might_del {
             bindings = <
 &kp_then_sl_slow LC(W) 3  &trans  &trans                          &trans                      &trans  &trans  &trans  &trans  &trans  &trans
 &trans                    &trans  &trans                          &trans                      &trans  &trans  &trans  &trans  &trans  &trans
@@ -644,7 +644,7 @@
             >;
         };
 
-        rtl_ws_lr {
+        rtl_ws_lr__might_del {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                 &trans                        &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                                 &trans                        &trans  &trans
@@ -667,7 +667,7 @@
 &kp_then_sl_slow LC(W) 7  &trans  &trans                          &trans                                            &trans  &trans  &trans                                             &trans                                 &trans  &trans
 &trans                    &trans  &trans                          &trans                                            &trans  &trans  &trans                                             &trans                                 &trans  &trans
 &trans                    &trans  &kp_then_sl_slow LC(LS(TAB)) 7  &htl_und_sl_slow_tab_ws_nav LEFT_CONTROL LC(TAB)  &trans  &trans  &htr_und_sl_slow_tab_ws_nav LEFT_CONTROL LG(LEFT)  &kp_then_sl_slow_tab_ws_nav LG(RIGHT)  &trans  &trans
-                                                                  &trans                                            &trans  &trans  &trans
+                                                                  &sl 1                                             &trans  &trans  &trans
             >;
         };
 
