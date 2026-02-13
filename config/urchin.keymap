@@ -535,7 +535,7 @@
 
         select_all {
             bindings = <&kp LC(A)>;
-            key-positions = <20 23>;
+            key-positions = <0 3>;
         };
     };
 
