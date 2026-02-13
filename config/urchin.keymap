@@ -537,6 +537,11 @@
             bindings = <&kp LC(A)>;
             key-positions = <0 3>;
         };
+
+        normal_keyboard_emulation {
+            bindings = <&tog 24>;
+            key-positions = <0 4 5 9>;
+        };
     };
 
     macros {
@@ -806,6 +811,15 @@
 &kp LS(LG(LC(C)))  &kp LS(LG(LC(R)))  &kp LS(LG(LC(S)))  &kp LS(LG(LC(T)))  &kp LS(LG(LC(H)))  &trans  &trans  &trans  &trans  &trans
 &kp LS(LG(LC(Q)))  &kp LS(LG(LC(J)))  &kp LS(LG(LC(V)))  &kp LS(LG(LC(D)))  &kp LS(LG(LC(K)))  &trans  &trans  &trans  &trans  &trans
                                                          &trans             &trans             &trans  &trans
+            >;
+        };
+
+        qwerty_no_mods_but_thumbs {
+            bindings = <
+&kp Q  &kp W  &kp E  &kp R     &kp T      &kp Y     &kp U     &kp I      &kp O    &kp P
+&kp A  &kp S  &kp D  &kp F     &kp G      &kp H     &kp J     &kp K      &kp L    &kp SEMI
+&kp Z  &kp X  &kp C  &kp V     &kp B      &kp N     &kp M     &kp COMMA  &kp DOT  &kp FSLH
+                     &kp LALT  &kp SPACE  &kp RALT  &kp RGUI
             >;
         };
     };
