@@ -816,10 +816,10 @@
 
         qwerty_no_mods_but_thumbs {
             bindings = <
-&kp N1    &kp N2  &kp N3  &kp E     &kp R      &kp I      &kp O     &kp N0    &kp MINUS  &kp EQUAL
-&kp TAB   &kp Q   &kp W   &kp D     &kp F      &kp K      &kp L     &kp P     &kp LBKT   &kp RBKT
-&kp CAPS  &kp A   &kp S   &kp X     &kp C      &kp COMMA  &kp DOT   &kp SEMI  &kp APOS   &kp NON_US_HASH
-                          &kp LALT  &kp SPACE  &kp RALT   &kp RGUI
+&kp N1    &kp N2  &kp N3  &kp E     &kp R      &kp I      &kp O      &kp N0    &kp MINUS  &kp EQUAL
+&kp TAB   &kp Q   &kp W   &kp D     &kp F      &kp K      &kp L      &kp P     &kp LBKT   &kp RBKT
+&kp CAPS  &kp A   &kp S   &kp X     &kp C      &kp COMMA  &kp DOT    &kp SEMI  &kp APOS   &kp NON_US_HASH
+                          &kp LALT  &kp SPACE  &kp RALT   &kp RCTRL
             >;
         };
     };
