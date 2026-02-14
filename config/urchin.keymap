@@ -600,9 +600,9 @@
 
         default_layer {
             bindings = <
-&ltl 15 W                         &kp L                 &htl_undec LGUI Z  &htl LEFT_CONTROL P        &kp B                   &kp Y            &htr LCTRL F        &htr_undec LGUI O    &kp U                 &ltr_end_shifted_home 15 0
+&ltl 15 Q                         &kp L                 &htl_undec LGUI Z  &htl LEFT_CONTROL P        &kp B                   &kp Y            &htr LCTRL F        &htr_undec LGUI O    &kp U                 &ltr_end_shifted_home 15 0
 &htl_undec_idle_req LEFT_SHIFT C  &htl_idle_req LALT R  &kp S              &t_T_h_Arr_m_ShiftArr      &kp G                   &htr LC(LGUI) M  &htr LA(LGUI) N     &htr LA(LC(LGUI)) E  &htr_idle_req LALT I  &htr_undec_idle_req LSHIFT A
-&ltr 14 Q                         &kp J                 &kp V              &htl_undec LEFT_CONTROL D  &kp K                   &kp X            &htr_undec LCTRL H  &kp COMMA            &kp DOT               &ltr 14 SEMICOLON
+&ltr 14 W                         &kp J                 &kp V              &htl_undec LEFT_CONTROL D  &kp K                   &kp X            &htr_undec LCTRL H  &kp COMMA            &kp DOT               &ltr 14 SEMICOLON
                                                                            &sl 1                      &t_sp_h_cmd_morph_caps  &sl 4            &tsk_hmo 9 RSHFT
             >;
         };
