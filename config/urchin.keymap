@@ -474,7 +474,7 @@
 
         combo_enter {
             bindings = <&tap_and_to ENTER 0>;
-            key-positions = <21 22>;
+            key-positions = <22 23>;
             timeout-ms = <25>;
         };
 
@@ -485,13 +485,13 @@
 
         tab {
             bindings = <&kp TAB>;
-            key-positions = <26 27>;
+            key-positions = <7 8>;
             timeout-ms = <15>;
         };
 
         combo_enter_right {
             bindings = <&tap_and_to ENTER 0>;
-            key-positions = <27 28>;
+            key-positions = <27 26>;
             timeout-ms = <25>;
         };
 
@@ -541,6 +541,11 @@
         normal_keyboard_emulation {
             bindings = <&tog 24>;
             key-positions = <0 4 5 9>;
+        };
+
+        select_all_bottom {
+            bindings = <&kp LC(A)>;
+            key-positions = <20 23>;
         };
     };
 
