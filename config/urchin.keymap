@@ -521,12 +521,6 @@
             key-positions = <1 2 3>;
         };
 
-        esc_right {
-            bindings = <&tap_and_to ESCAPE 0>;
-            key-positions = <17 16>;
-            timeout-ms = <20>;
-        };
-
         ctrl_bsp2 {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <17 16 18>;
@@ -546,6 +540,17 @@
         select_all_bottom {
             bindings = <&kp LC(A)>;
             key-positions = <20 23>;
+        };
+
+        esc2 {
+            bindings = <&tap_and_to ESCAPE 0>;
+            key-positions = <12 13>;
+        };
+
+        bsp2 {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <17 16>;
+            timeout-ms = <25>;
         };
     };
 
